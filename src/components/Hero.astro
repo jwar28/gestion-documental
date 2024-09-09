@@ -1,6 +1,6 @@
 ---
 import BlurFade from "./magicui/blur-fade";
-import ShimmerButton from "./ui/ShimmerButton.astro";
+import CustomButton from "./ui/CustomButton.astro";
 ---
 
 <section class="flex gap-5 justify-between">
@@ -24,7 +24,7 @@ import ShimmerButton from "./ui/ShimmerButton.astro";
         </div>
 
         <BlurFade delay={0.25 * 4} client:load>
-            <ShimmerButton content="Inscribete ya" />
+            <CustomButton content="Inscribete ya" />
         </BlurFade>
     </div>
 
