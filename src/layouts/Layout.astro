@@ -1,5 +1,7 @@
 ---
-import { NavDock } from '@/components/ui/NavDock';
+import BlurFade from "@/components/magicui/blur-fade";
+import Background from "@/components/ui/Background.astro";
+import Container from "@/components/ui/Container.astro";
 
 interface Props {
 	title: string;
@@ -19,7 +21,26 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
-		<NavDock client:load/>
+		<BlurFade delay={0.25} client:load>
+			<img
+				src="/logo.png"
+				alt="sena-logo"
+				class="h-16 w-16 sticky sm:absolute mx-auto mt-5 sm:ml-8 sm:mt-8"
+			/>
+		</BlurFade>
+		<Background />
+		<Container>
+			<slot />
+		</Container>
 	</body>
 </html>
+
+<style>
+	@font-face {
+		font-family: "Inter";
+		src: url("/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+</style>

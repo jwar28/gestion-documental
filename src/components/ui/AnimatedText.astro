@@ -1,0 +1,9 @@
+---
+import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
+
+const { text, className } = Astro.props;
+---
+
+<AnimatedShinyText client:load className={className}>
+    <span>{text}</span>
+</AnimatedShinyText>

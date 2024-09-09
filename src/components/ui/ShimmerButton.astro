@@ -1,0 +1,17 @@
+---
+import ShimmerButton from "@/components/magicui/shimmer-button";
+import { ChevronRightIcon } from "lucide-react";
+
+const { content } = Astro.props;
+---
+
+<ShimmerButton className="shadow-2xl w-56">
+    <span
+        className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white"
+    >
+        {content}
+    </span>
+    <ChevronRightIcon
+        className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+    />
+</ShimmerButton>
