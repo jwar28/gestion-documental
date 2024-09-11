@@ -1,38 +1,29 @@
 ---
-import BlurFade from "./magicui/blur-fade";
-import CustomButton from "./ui/CustomButton.astro";
+import BlurFade from "./magicui/blur-fade"
+import CustomButton from "./ui/CustomButton.astro"
 ---
 
-<section class="flex gap-5 justify-between">
-    <div class="flex flex-col justify-between items-center gap-5 sm:px-5">
-        <div class="flex flex-col gap-5">
-            <BlurFade delay={0.25 * 2} client:load>
-                <h1
-                    class="text-center text-4xl font-bold text-gray-900 sm:text-6xl text-pretty"
-                >
-                    Tecnólogo en Gestión Documental
-                </h1>
-            </BlurFade>
-            <BlurFade delay={0.25 * 3} client:load>
-                <p
-                    class="text-center text-lg leading-6 text-gray-600 text-balance"
-                >
-                    Desarrolla habilidades clave en gestión de archivos y
-                    documentos
-                </p>
-            </BlurFade>
-        </div>
+<section class="flex justify-between gap-5 sm:mt-10">
+	<div class="flex flex-col items-center justify-between gap-5 sm:px-5">
+		<div class="flex flex-col gap-5">
+			<BlurFade delay={0.25 * 2} client:load>
+				<h1 class="text-pretty text-center text-4xl font-bold text-gray-900 sm:text-6xl">
+					Tecnólogo en Gestión Documental
+				</h1>
+			</BlurFade>
+			<BlurFade delay={0.25 * 3} client:load>
+				<p class="text-balance text-center text-lg leading-6 text-gray-600">
+					Desarrolla habilidades clave en gestión de archivos y documentos
+				</p>
+			</BlurFade>
+		</div>
 
-        <BlurFade delay={0.25 * 4} client:load>
-            <CustomButton content="Inscribete ya" />
-        </BlurFade>
-    </div>
+		<BlurFade delay={0.25 * 4} client:load>
+			<CustomButton content="Inscribete ya" />
+		</BlurFade>
+	</div>
 
-    <BlurFade
-        delay={0.25 * 5}
-        client:load
-        className="w-full h-fit max-sm:hidden"
-    >
-        <img src="/sena.jpeg" alt="" class="rounded-xl max-sm:hidden" />
-    </BlurFade>
+	<BlurFade delay={0.25 * 5} client:load className="h-fit w-full max-sm:hidden">
+		<img src="/sena.jpeg" alt="" class="rounded-xl max-sm:hidden" />
+	</BlurFade>
 </section>

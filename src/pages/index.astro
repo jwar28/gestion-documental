@@ -1,16 +1,16 @@
 ---
-import Hero from "@/components/Hero.astro";
-import Layout from "../layouts/Layout.astro";
-import { Separator } from "@/components/ui/separator";
-import "@/styles/globals.css";
-import { Information } from "@/components/Information";
+import Hero from "@/components/Hero.astro"
+import { Information } from "@/components/Information"
+import { Separator } from "@/components/ui/separator"
+import "@/styles/globals.css"
+import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Tecnólogo en Gestion Documental">
 	<main>
 		<Hero />
-		<Separator className="my-14 sm:my-20"/>
-		<Information client:load/>
-		<Separator className="my-14 sm:my-20"/>
+		<Separator className="my-14 sm:my-20" />
+		<Information client:load />
+		<Separator className="my-14 sm:my-20" />
 	</main>
 </Layout>
