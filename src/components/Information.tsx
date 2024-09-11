@@ -3,10 +3,11 @@ import { INFORMATION } from "@/data/information";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChevronDown } from "lucide-react";
 import BlurFade from "./magicui/blur-fade";
+import { Separator } from "./ui/separator";
 
 export function Information() {
 	return (
-		<section>
+		<section className="py-20" id="information">
 			<BlurFade delay={0.25 * 6}>
 				<div className="flex flex-col items-center justify-center">
 					<p className="text-center text-xl font-bold">

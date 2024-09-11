@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import { fontFamily } from "tailwindcss/defaultTheme"
+import { fontFamily } from "tailwindcss/defaultTheme";
 module.exports = {
 	darkMode: ["class"],
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -79,12 +79,12 @@ module.exports = {
 						transform: "translateZ(0) rotate(360deg)",
 					},
 				},
-				"slide": {
+				slide: {
 					to: {
 						transform: "translate(calc(100cqw - 100%), 0)",
 					},
 				},
-				"shimmer": {
+				shimmer: {
 					"0%, 90%, 100%": {
 						"background-position": "calc(-100% - var(--shimmer-width)) 0",
 					},
@@ -92,15 +92,20 @@ module.exports = {
 						"background-position": "calc(100% + var(--shimmer-width)) 0",
 					},
 				},
+				pulse: {
+					"0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
+					"50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
+				},
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				"spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
-				"slide": "slide var(--speed) ease-in-out infinite alternate",
-				"shimmer": "shimmer 8s infinite",
+				slide: "slide var(--speed) ease-in-out infinite alternate",
+				shimmer: "shimmer 8s infinite",
+				pulse: "pulse var(--duration) ease-out infinite",
 			},
 		},
 	},
 	plugins: [require("tailwindcss-animate")],
-}
+};

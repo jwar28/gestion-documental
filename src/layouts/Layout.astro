@@ -2,6 +2,7 @@
 import BlurFade from "@/components/magicui/blur-fade"
 import Background from "@/components/ui/Background.astro"
 import Container from "@/components/ui/Container.astro"
+import Navbar from "@/components/ui/Navbar"
 
 interface Props {
 	title: string
@@ -11,7 +12,7 @@ const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -21,14 +22,8 @@ const { title } = Astro.props
 		<title>{title}</title>
 	</head>
 	<body>
-		<BlurFade delay={0.25} client:load>
-			<img
-				src="/logo.png"
-				alt="sena-logo"
-				class="sticky mx-auto mt-5 h-16 w-16 sm:absolute sm:ml-8 sm:mt-8"
-			/>
-		</BlurFade>
 		<Background />
+		<Navbar client:load/>
 		<Container>
 			<slot />
 		</Container>
