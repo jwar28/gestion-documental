@@ -8,7 +8,7 @@ import CustomButton from "./ui/CustomButton.astro";
         <div class="flex flex-col gap-5">
             <BlurFade delay={0.25 * 2} client:load>
                 <h1
-                    class="text-center text-4xl font-medium text-gray-900 sm:text-6xl text-pretty"
+                    class="text-center text-4xl font-bold text-gray-900 sm:text-6xl text-pretty"
                 >
                     Tecnólogo en Gestión Documental
                 </h1>
@@ -28,7 +28,11 @@ import CustomButton from "./ui/CustomButton.astro";
         </BlurFade>
     </div>
 
-    <BlurFade delay={0.25 * 5} client:load className="w-full h-fit max-sm:hidden">
+    <BlurFade
+        delay={0.25 * 5}
+        client:load
+        className="w-full h-fit max-sm:hidden"
+    >
         <img src="/sena.jpeg" alt="" class="rounded-xl max-sm:hidden" />
     </BlurFade>
 </section>
