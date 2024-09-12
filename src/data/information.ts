@@ -26,4 +26,4 @@ export const INFORMATION = {
 	],
 	extra_requirements:
 		"Presentar el resultado de la prueba o examen de estado de la educación media.",
-};
+}

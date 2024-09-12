@@ -7,10 +7,10 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Tecnólogo en Gestion Documental">
-	<main>
-		<Hero/>
-		<Separator className="mt-14 sm:mt-20" />
+	<main class="flex flex-col gap-16 sm:gap-24">
+		<Hero showChevron />
+		<Separator />
 		<Information client:load />
-		<Separator className="my-14 sm:my-20" />
+		<Separator />
 	</main>
 </Layout>

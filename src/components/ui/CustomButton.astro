@@ -5,8 +5,10 @@ import { ChevronRightIcon } from "lucide-react"
 const { content } = Astro.props
 ---
 
-<ShimmerButton background="#70b22d" className="w-56 shadow-2xl">
-	<span class="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white">
+<ShimmerButton shimmerColor="70b22d" background="#70b22d" className="w-56 shadow-2xl">
+	<span
+		class="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white"
+	>
 		{content}
 	</span>
 	<ChevronRightIcon

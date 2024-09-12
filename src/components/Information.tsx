@@ -1,19 +1,17 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { INFORMATION } from "@/data/information";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ChevronDown } from "lucide-react";
-import BlurFade from "./magicui/blur-fade";
-import { Separator } from "./ui/separator";
+import { Card, CardContent } from "@/components/ui/card"
+import { INFORMATION } from "@/data/information"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { ChevronDown } from "lucide-react"
+import BlurFade from "./magicui/blur-fade"
 
 export function Information() {
 	return (
-		<section className="py-20" id="information">
+		<section className="sm:flex sm:flex-col sm:items-center sm:justify-center" id="information">
 			<BlurFade delay={0.25 * 6}>
 				<div className="flex flex-col items-center justify-center">
 					<p className="text-center text-xl font-bold">
-						Encuentra{" "}
-						<span className="text-[#70b22d]">información relevante</span> sobre
-						el tecnólogo aquí.
+						Encuentra <span className="text-[#70b22d]">información relevante</span> sobre el
+						tecnólogo aquí.
 					</p>
 					<ChevronDown className="mb-2 mt-2 animate-bounce text-center" />
 				</div>
@@ -34,9 +32,7 @@ export function Information() {
 										{INFORMATION.city}
 									</p>
 									<p className="text-balance text-gray-700">
-										<strong className="text-gray-900">
-											Lugar de Realización:{" "}
-										</strong>
+										<strong className="text-gray-900">Lugar de Realización: </strong>
 										{INFORMATION.realization_place}
 									</p>
 									<p className="text-gray-700">
@@ -50,15 +46,11 @@ export function Information() {
 								</div>
 								<div>
 									<p className="text-gray-700">
-										<strong className="text-gray-900">
-											Tipo de Programa:{" "}
-										</strong>
+										<strong className="text-gray-900">Tipo de Programa: </strong>
 										{INFORMATION.program_type}
 									</p>
 									<p className="text-gray-700">
-										<strong className="text-gray-900">
-											Perfil de Entrada:{" "}
-										</strong>
+										<strong className="text-gray-900">Perfil de Entrada: </strong>
 										{INFORMATION.entry_profile}
 									</p>
 									<p className="text-gray-700">
@@ -72,9 +64,7 @@ export function Information() {
 					<TabsContent value="desc">
 						<Card>
 							<CardContent className="p-6">
-								<p className="text-pretty text-gray-700 md:text-lg">
-									{INFORMATION.description}
-								</p>
+								<p className="text-pretty text-gray-700 md:text-lg">{INFORMATION.description}</p>
 							</CardContent>
 						</Card>
 					</TabsContent>
@@ -90,5 +80,5 @@ export function Information() {
 				</Tabs>
 			</BlurFade>
 		</section>
-	);
+	)
 }

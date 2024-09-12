@@ -1,5 +1,4 @@
 ---
-import BlurFade from "@/components/magicui/blur-fade"
 import Background from "@/components/ui/Background.astro"
 import Container from "@/components/ui/Container.astro"
 import Navbar from "@/components/ui/Navbar"
@@ -23,7 +22,7 @@ const { title } = Astro.props
 	</head>
 	<body>
 		<Background />
-		<Navbar client:load/>
+		<Navbar client:load />
 		<Container>
 			<slot />
 		</Container>

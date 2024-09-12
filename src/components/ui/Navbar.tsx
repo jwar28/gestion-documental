@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
-import PulsatingButton from "../magicui/pulsating-button";
+import { useState, useEffect } from "react"
+import { Menu } from "lucide-react"
+import PulsatingButton from "../magicui/pulsating-button"
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -8,55 +8,55 @@ import {
 	DropdownMenuLabel,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
-} from "./dropdown-menu";
+} from "./dropdown-menu"
 
 export default function Navbar() {
-	const [isSticky, setIsSticky] = useState(false);
-	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [isSticky, setIsSticky] = useState(false)
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setIsSticky(window.scrollY > 0);
-		};
+			setIsSticky(window.scrollY > 0)
+		}
 
-		window.addEventListener("scroll", handleScroll);
+		window.addEventListener("scroll", handleScroll)
 
 		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
+			window.removeEventListener("scroll", handleScroll)
+		}
+	}, [])
 
 	return (
-		<nav className="w-full fixed top-0 shadow-sm border-b bg-white z-50 transition-all duration-300">
-			<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="flex justify-between items-center h-16">
+		<nav className="sticky top-0 z-50 w-full border-b bg-white shadow-sm transition-all duration-300 sm:fixed">
+			<div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+				<div className="flex h-16 items-center justify-between">
 					<div className="flex-shrink-0">
 						<img src="/logo.png" alt="SENA Logo" width={50} height={50} />
 					</div>
 
-					<div className="hidden md:flex flex-grow justify-center">
+					<div className="hidden flex-grow justify-center md:flex">
 						<div className="flex items-baseline space-x-4">
 							<a
 								href="#home"
-								className="text-gray-600 hover:text-[#70b22d] px-3 py-2 rounded-md text-sm font-medium"
+								className="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-[#70b22d]"
 							>
 								Inicio
 							</a>
 							<a
 								href="#information"
-								className="text-gray-600 hover:text-[#70b22d] px-3 py-2 rounded-md text-sm font-medium"
+								className="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-[#70b22d]"
 							>
 								Información
 							</a>
 							<a
 								href="#"
-								className="text-gray-600 hover:text-[#70b22d] px-3 py-2 rounded-md text-sm font-medium"
+								className="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-[#70b22d]"
 							>
 								Habilidades
 							</a>
 							<a
 								href="#"
-								className="text-gray-600 hover:text-[#70b22d] px-3 py-2 rounded-md text-sm font-medium"
+								className="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-[#70b22d]"
 							>
 								Temas
 							</a>
@@ -66,16 +66,16 @@ export default function Navbar() {
 					<div className="hidden md:block">
 						<PulsatingButton
 							pulseColor="#88d736"
-							className="bg-[#70b22d] text-white px-4 py-2 rounded-md text-sm font-medium"
+							className="rounded-md bg-[#70b22d] px-4 py-2 text-sm font-medium text-white"
 						>
 							Ver ofertas
 						</PulsatingButton>
 					</div>
 
-					<div className="md:hidden flex items-center w-full">
+					<div className="flex w-full items-center md:hidden">
 						<PulsatingButton
 							pulseColor="#88d736"
-							className="bg-[#70b22d] text-white px-4 py-2 rounded-md text-sm font-medium mx-auto"
+							className="mx-auto rounded-md bg-[#70b22d] px-4 py-2 text-sm font-medium text-white"
 						>
 							Ver ofertas
 						</PulsatingButton>
@@ -87,7 +87,7 @@ export default function Navbar() {
 								<DropdownMenuItem>
 									<a
 										href="#"
-										className="text-gray-600 hover:text-[#70b22d] block px-3 py-2 rounded-md text-base font-medium"
+										className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-[#70b22d]"
 									>
 										Inicio
 									</a>
@@ -95,7 +95,7 @@ export default function Navbar() {
 								<DropdownMenuItem>
 									<a
 										href="#"
-										className="text-gray-600 hover:text-[#70b22d] block px-3 py-2 rounded-md text-base font-medium"
+										className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-[#70b22d]"
 									>
 										Información
 									</a>
@@ -103,7 +103,7 @@ export default function Navbar() {
 								<DropdownMenuItem>
 									<a
 										href="#"
-										className="text-gray-600 hover:text-[#70b22d] block px-3 py-2 rounded-md text-base font-medium"
+										className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-[#70b22d]"
 									>
 										Habilidades
 									</a>
@@ -111,7 +111,7 @@ export default function Navbar() {
 								<DropdownMenuItem>
 									<a
 										href="#"
-										className="text-gray-600 hover:text-[#70b22d] block px-3 py-2 rounded-md text-base font-medium"
+										className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-[#70b22d]"
 									>
 										Temas
 									</a>
@@ -124,9 +124,9 @@ export default function Navbar() {
 
 			{isMobileMenuOpen && (
 				<div className="md:hidden">
-					<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3"></div>
+					<div className="space-y-1 px-2 pb-3 pt-2 sm:px-3"></div>
 				</div>
 			)}
 		</nav>
-	);
+	)
 }
