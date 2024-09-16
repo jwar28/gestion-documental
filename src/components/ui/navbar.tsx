@@ -80,7 +80,7 @@ export default function Navbar() {
 							<DropdownMenuContent>
 								<DropdownMenuItem>
 									<a
-										href="#"
+										href="#home"
 										className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-[#70b22d]"
 									>
 										Inicio
@@ -88,7 +88,7 @@ export default function Navbar() {
 								</DropdownMenuItem>
 								<DropdownMenuItem>
 									<a
-										href="#"
+										href="#information"
 										className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-[#70b22d]"
 									>
 										Información
@@ -96,18 +96,10 @@ export default function Navbar() {
 								</DropdownMenuItem>
 								<DropdownMenuItem>
 									<a
-										href="#"
+										href="#skills"
 										className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-[#70b22d]"
 									>
 										Habilidades
-									</a>
-								</DropdownMenuItem>
-								<DropdownMenuItem>
-									<a
-										href="#"
-										className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-[#70b22d]"
-									>
-										Temas
 									</a>
 								</DropdownMenuItem>
 							</DropdownMenuContent>
@@ -116,11 +108,9 @@ export default function Navbar() {
 				</div>
 			</div>
 
-			{isMobileMenuOpen && (
-				<div className="md:hidden">
-					<div className="space-y-1 px-2 pb-3 pt-2 sm:px-3"></div>
-				</div>
-			)}
+			<div className="md:hidden">
+				<div className="space-y-1 px-2 pb-3 pt-2 sm:px-3"></div>
+			</div>
 		</nav>
 	)
 }

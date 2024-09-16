@@ -6,10 +6,13 @@ import BlurFade from "./magicui/blur-fade"
 
 export function Information() {
 	return (
-		<section className="sm:flex sm:flex-col sm:items-center sm:justify-center" id="information">
+		<section
+			className="sm:flex sm:min-h-screen sm:flex-col sm:items-center sm:justify-center"
+			id="information"
+		>
 			<BlurFade delay={0.25 * 3}>
 				<div className="flex flex-col items-center justify-center">
-					<p className="text-center text-xl font-bold">
+					<p className="text-center text-2xl font-semibold text-neutral-700">
 						Encuentra <span className="text-[#70b22d]">información relevante</span> sobre el
 						tecnólogo aquí.
 					</p>
@@ -17,61 +20,57 @@ export function Information() {
 				</div>
 			</BlurFade>
 			<BlurFade delay={0.25 * 4}>
-				<Tabs defaultValue="info" className="w-full">
+				<Tabs defaultValue="info" className="sm:min-w-[60rem] sm:max-w-[60rem]">
 					<TabsList className="grid w-full grid-cols-3">
 						<TabsTrigger value="info">Información</TabsTrigger>
 						<TabsTrigger value="desc">Descripción</TabsTrigger>
 						<TabsTrigger value="req">Requisitos</TabsTrigger>
 					</TabsList>
 					<TabsContent value="info">
-						<Card>
-							<CardContent className="grid grid-cols-1 gap-4 p-6 md:grid-cols-2">
-								<div>
-									<p className="text-gray-700">
-										<strong className="text-gray-900">Ciudad: </strong>
-										{INFORMATION.city}
-									</p>
-									<p className="text-balance text-gray-700">
-										<strong className="text-gray-900">Lugar de Realización: </strong>
-										{INFORMATION.realization_place}
-									</p>
-									<p className="text-gray-700">
-										<strong className="text-gray-900">Modalidad: </strong>
-										{INFORMATION.modality}
-									</p>
-									<p className="text-gray-700">
-										<strong className="text-gray-900">Cupo Máximo: </strong>
-										{INFORMATION.max_capacity}
-									</p>
-								</div>
-								<div>
-									<p className="text-gray-700">
-										<strong className="text-gray-900">Tipo de Programa: </strong>
-										{INFORMATION.program_type}
-									</p>
-									<p className="text-gray-700">
-										<strong className="text-gray-900">Perfil de Entrada: </strong>
-										{INFORMATION.entry_profile}
-									</p>
-									<p className="text-gray-700">
-										<strong className="text-gray-900">Línea o Área: </strong>
-										{INFORMATION.area}
-									</p>
-								</div>
+						<Card className="sm:h-[170px]">
+							<CardContent className="flex flex-col flex-wrap items-center justify-around gap-6 p-5 sm:flex-row">
+								<p className="flex w-fit flex-col items-center text-neutral-500">
+									<strong className="text-lg font-semibold text-neutral-700">
+										Tipo de Programa
+									</strong>
+									{INFORMATION.program_type}
+								</p>
+								<p className="flex w-fit flex-col items-center text-neutral-500">
+									<strong className="text-lg font-semibold text-neutral-700">Ciudad</strong>
+									{INFORMATION.city}
+								</p>
+								<p className="flex w-fit flex-col items-center text-neutral-500">
+									<strong className="text-lg font-semibold text-neutral-700">Modalidad</strong>
+									{INFORMATION.modality}
+								</p>
+								<p className="flex w-fit flex-col items-center text-neutral-500">
+									<strong className="text-lg font-semibold text-neutral-700">Línea o Área</strong>
+									{INFORMATION.area}
+								</p>
+								<p className="flex w-fit flex-col items-center text-neutral-500">
+									<strong className="text-lg font-semibold text-neutral-700">Cupo Máximo</strong>
+									{INFORMATION.max_capacity}
+								</p>
+								<p className="flex w-fit flex-col items-center text-balance text-neutral-500 max-sm:text-center">
+									<strong className="text-lg font-semibold text-neutral-700">
+										Lugar de Realización
+									</strong>
+									{INFORMATION.realization_place}
+								</p>
 							</CardContent>
 						</Card>
 					</TabsContent>
 					<TabsContent value="desc">
-						<Card>
+						<Card className="sm:h-[170px]">
 							<CardContent className="p-6">
-								<p className="text-pretty text-gray-700 md:text-lg">{INFORMATION.description}</p>
+								<p className="text-pretty text-neutral-700 sm:text-lg">{INFORMATION.description}</p>
 							</CardContent>
 						</Card>
 					</TabsContent>
 					<TabsContent value="req">
-						<Card>
+						<Card className="sm:h-[170px]">
 							<CardContent className="p-6">
-								<p className="text-balance text-gray-700 md:text-lg">
+								<p className="text-balance text-neutral-700 sm:text-lg">
 									{INFORMATION.extra_requirements}
 								</p>
 							</CardContent>
