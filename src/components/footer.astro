@@ -1,0 +1,27 @@
+---
+import BlurFade from "./magicui/blur-fade"
+---
+
+<section id="contact">
+	<div
+		class="grid w-full items-center justify-center gap-4 px-4 pb-16 text-center sm:py-12 md:px-6"
+	>
+		<BlurFade delay={0.25 * 1} client:visible>
+			<div class="space-y-3">
+				<h2 class="text-balance text-3xl font-bold tracking-tighter text-neutral-700 sm:text-5xl">
+					Que esperas para iniciar tu carrera?
+				</h2>
+				<p
+					class="mx-auto max-w-[600px] text-balance text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+				>
+					Si tienes alguna duda o pregunta sobre nuestros programas, estamos aquí para ayudarte.
+					Envíanos un <a
+						href="https://api.whatsapp.com/send?phone=573232842831"
+						target="_blank"
+						class="text-[#70b22d] hover:underline">mensaje directo</a
+					> y te responderemos lo antes posible.
+				</p>
+			</div>
+		</BlurFade>
+	</div>
+</section>

@@ -1,0 +1,114 @@
+---
+import AnimatedShinyText from "@/components/magicui/animated-shiny-text"
+import Particles from "@/components/magicui/particles"
+import ShimmerButton from "@/components/magicui/shimmer-button"
+import Background from "@/components/ui/Background.astro"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { INFORMATION } from "@/data/information"
+import "@/styles/globals.css"
+import { ViewTransitions } from "astro:transitions"
+import { ArrowLeft, Calendar, Clock, MapPin } from "lucide-react"
+
+const { offers } = INFORMATION
+---
+
+<html lang="es">
+	<head>
+		<title>Ofertas</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions transition:persist />
+	</head>
+
+	<section class="relative mx-auto max-w-5xl px-6 font-sans antialiased sm:pb-14">
+		<div class="z-40 flex w-full flex-col items-center justify-between pt-6 sm:flex-row sm:pt-10">
+			<div class="flex justify-start">
+				<a href="/">
+					<ShimmerButton background="#70b22d" className="flex items-center max-sm:mb-6">
+						<ArrowLeft className="mr-2 h-4 w-4" />
+						Información
+					</ShimmerButton>
+				</a>
+			</div>
+
+			<div class="text-center sm:flex-1">
+				{
+					offers.length === 0 ? (
+						<p class="text-balance text-3xl font-semibold tracking-tighter text-muted-foreground text-neutral-800 sm:text-4xl">
+							No hay ofertas disponibles
+						</p>
+					) : (
+						<AnimatedShinyText client:visible>
+							<span class="text-balance text-3xl font-semibold tracking-tighter text-muted-foreground text-neutral-800 sm:text-4xl">Ofertas disponibles</span>
+						</AnimatedShinyText>
+					)
+				}
+			</div>
+			<div class="hidden w-[161px] md:block"></div>
+		</div>
+
+		<div
+			class={offers.length === 1
+				? "z-50 flex flex-col flex-wrap items-center justify-center py-6 sm:pt-10 sm:flex-row"
+				: "z-50 flex flex-col flex-wrap items-center justify-evenly py-6 gap-5 sm:pt-10 sm:flex-row"}
+		>
+			{
+				offers.length === 0 && (
+					<p class="text-balance text-center text-3xl tracking-tighter text-muted-foreground text-neutral-700">
+						Vuelve pronto a consultar las ofertas disponibles
+					</p>
+				)
+			}
+			{
+				offers.map((offer, index) => (
+					<Card className="max-sm:w-full sm:w-72 z-50">
+						<CardHeader>
+							<CardTitle>{offer.title}</CardTitle>
+							<CardDescription>{offer.description}</CardDescription>
+						</CardHeader>
+						<CardContent className="flex-grow">
+							<div class="mt-2 flex items-center">
+								<Clock className="mr-2 h-4 w-4" />
+								<span>{offer.duration}</span>
+							</div>
+							<div class="mt-2 flex items-center">
+								<Calendar className="mr-2 h-4 w-4" />
+								<span>{offer.start_date}</span>
+							</div>
+							<div class="mt-2 flex items-center">
+								<MapPin className="mr-2 h-4 w-4" />
+								<span>{offer.modality}</span>
+							</div>
+							<a href={offer.url} class="flex justify-center">
+								<Button className="mt-4 bg-[#70b22d] hover:bg-[#3f6519]">Ver oferta</Button>
+							</a>
+						</CardContent>
+					</Card>
+				))
+			}
+		</div>
+	</section>
+	<Particles
+		className="pointer-events-none absolute inset-0 z-10"
+		quantity={100}
+		ease={80}
+		size={2}
+		color="#a1fe41"
+		refresh
+		client:visible
+	/>
+	<Background />
+</html>
+
+<style>
+	@font-face {
+		font-family: "Inter";
+		src: url("/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+</style>

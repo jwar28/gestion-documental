@@ -6,25 +6,25 @@ import CustomButton from "./ui/CustomButton.astro"
 
 <section class="flex items-center justify-center gap-5 max-sm:mt-16 sm:min-h-screen" id="home">
 	<div class="z-40 flex flex-col items-center gap-5 sm:w-3/4 sm:p-5">
-		<BlurFade delay={0.25 * 2} client:load>
+		<BlurFade delay={0.25 * 1} client:load>
 			<h1
-				class="text-pretty text-center text-4xl font-semibold text-neutral-800 sm:bg-opacity-50 sm:text-6xl"
+				class="text-pretty text-center text-3xl font-semibold tracking-tighter text-neutral-800 sm:text-6xl"
 			>
 				Tecnólogo en Gestión Documental
 			</h1>
 		</BlurFade>
 		<BlurFade delay={0.25 * 2} client:load>
-			<p class="text-balance text-center text-lg leading-6 text-neutral-600">
+			<p class="text-balance text-center text-lg leading-6 text-muted-foreground text-neutral-600">
 				Desarrolla habilidades clave en gestión de archivos y documentos
 			</p>
 		</BlurFade>
 
-		<BlurFade delay={0.25 * 2} client:load>
-			<CustomButton content="Inscribete ya" />
+		<BlurFade delay={0.25 * 3} client:load>
+			<a href="/offers"><CustomButton content="Inscribete ya" /></a>
 		</BlurFade>
 	</div>
 	<Particles
-		className="absolute inset-0 z-0 max-sm:hidden"
+		className="absolute inset-0 z-0"
 		quantity={100}
 		ease={80}
 		size={2}

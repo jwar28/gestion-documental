@@ -1,5 +1,6 @@
 ---
-import Hero from "@/components/Hero.astro"
+import Footer from "@/components/footer.astro"
+import Hero from "@/components/hero.astro"
 import { Information } from "@/components/information"
 import { Skills } from "@/components/skills"
 import { Separator } from "@/components/ui/separator"
@@ -11,8 +12,9 @@ import Layout from "../layouts/Layout.astro"
 	<main class="flex flex-col max-sm:gap-16">
 		<Hero showChevron />
 		<Separator />
-		<Information client:load />
+		<Information client:visible />
 		<Separator />
-		<Skills client:load />
+		<Skills client:visible />
+		<Footer />
 	</main>
 </Layout>

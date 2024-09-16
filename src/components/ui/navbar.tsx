@@ -11,21 +11,6 @@ import {
 } from "./dropdown-menu"
 
 export default function Navbar() {
-	const [isSticky, setIsSticky] = useState(false)
-	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-	useEffect(() => {
-		const handleScroll = () => {
-			setIsSticky(window.scrollY > 0)
-		}
-
-		window.addEventListener("scroll", handleScroll)
-
-		return () => {
-			window.removeEventListener("scroll", handleScroll)
-		}
-	}, [])
-
 	return (
 		<nav className="sticky top-0 z-50 w-full border-b bg-white shadow-sm transition-all duration-300 sm:fixed">
 			<div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -58,21 +43,26 @@ export default function Navbar() {
 					</div>
 
 					<div className="hidden md:block">
-						<PulsatingButton
-							pulseColor="#88d736"
-							className="rounded-md bg-[#70b22d] px-4 py-2 text-sm font-medium text-white"
-						>
-							Ver ofertas
-						</PulsatingButton>
+						<a href="/offers">
+							<PulsatingButton
+								pulseColor="#88d736"
+								className="rounded-md bg-[#70b22d] px-4 py-2 text-sm font-medium text-white"
+							>
+								Ver ofertas
+							</PulsatingButton>
+						</a>
 					</div>
 
 					<div className="flex w-full items-center md:hidden">
-						<PulsatingButton
-							pulseColor="#88d736"
-							className="mx-auto rounded-md bg-[#70b22d] px-4 py-2 text-sm font-medium text-white"
-						>
-							Ver ofertas
-						</PulsatingButton>
+						<a href="/offers" className="mx-auto">
+							<PulsatingButton
+								pulseColor="#88d736"
+								className="rounded-md bg-[#70b22d] px-4 py-2 text-sm font-medium text-white"
+							>
+								Ver ofertas
+							</PulsatingButton>
+						</a>
+
 						<DropdownMenu>
 							<DropdownMenuTrigger>
 								<Menu className="block h-6 w-6" aria-hidden="true" />
