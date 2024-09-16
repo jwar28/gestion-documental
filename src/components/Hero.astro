@@ -1,27 +1,35 @@
 ---
 import BlurFade from "./magicui/blur-fade"
+import Particles from "./magicui/particles"
 import CustomButton from "./ui/CustomButton.astro"
 ---
 
-<section class="flex items-center justify-center gap-5 max-sm:mt-16 sm:pt-36" id="home">
-	<div class="flex flex-col items-center gap-5 sm:px-5">
+<section class="flex items-center justify-center gap-5 max-sm:mt-16 sm:min-h-screen" id="home">
+	<div class="z-40 flex flex-col items-center gap-5 sm:w-3/4 sm:p-5">
 		<BlurFade delay={0.25 * 2} client:load>
-			<h1 class="text-pretty text-center text-4xl font-bold text-gray-900 sm:text-6xl">
+			<h1
+				class="text-pretty text-center text-4xl font-bold text-gray-900 sm:bg-opacity-50 sm:text-6xl"
+			>
 				Tecnólogo en Gestión Documental
 			</h1>
 		</BlurFade>
-		<BlurFade delay={0.25 * 3} client:load>
+		<BlurFade delay={0.25 * 2} client:load>
 			<p class="text-balance text-center text-lg leading-6 text-gray-600">
 				Desarrolla habilidades clave en gestión de archivos y documentos
 			</p>
 		</BlurFade>
 
-		<BlurFade delay={0.25 * 4} client:load>
+		<BlurFade delay={0.25 * 2} client:load>
 			<CustomButton content="Inscribete ya" />
 		</BlurFade>
 	</div>
-
-	<BlurFade delay={0.25 * 5} client:load className="h-80 w-full max-sm:hidden">
-		<img src="/sena.jpeg" alt="" class="rounded-xl max-sm:hidden" />
-	</BlurFade>
+	<Particles
+		className="absolute inset-0 z-0 max-sm:hidden"
+		quantity={100}
+		ease={80}
+		size={1}
+		color="#a1fe41"
+		refresh
+		client:load
+	/>
 </section>

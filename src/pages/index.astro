@@ -1,6 +1,7 @@
 ---
 import Hero from "@/components/Hero.astro"
-import { Information } from "@/components/Information"
+import { Information } from "@/components/information"
+import { Skills } from "@/components/skills"
 import { Separator } from "@/components/ui/separator"
 import "@/styles/globals.css"
 import Layout from "../layouts/Layout.astro"
@@ -12,5 +13,6 @@ import Layout from "../layouts/Layout.astro"
 		<Separator />
 		<Information client:load />
 		<Separator />
+		<Skills client:load />
 	</main>
 </Layout>

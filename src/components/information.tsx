@@ -7,7 +7,7 @@ import BlurFade from "./magicui/blur-fade"
 export function Information() {
 	return (
 		<section className="sm:flex sm:flex-col sm:items-center sm:justify-center" id="information">
-			<BlurFade delay={0.25 * 6}>
+			<BlurFade delay={0.25 * 3}>
 				<div className="flex flex-col items-center justify-center">
 					<p className="text-center text-xl font-bold">
 						Encuentra <span className="text-[#70b22d]">información relevante</span> sobre el
@@ -16,7 +16,7 @@ export function Information() {
 					<ChevronDown className="mb-2 mt-2 animate-bounce text-center" />
 				</div>
 			</BlurFade>
-			<BlurFade delay={0.25 * 7}>
+			<BlurFade delay={0.25 * 4}>
 				<Tabs defaultValue="info" className="w-full">
 					<TabsList className="grid w-full grid-cols-3">
 						<TabsTrigger value="info">Información</TabsTrigger>

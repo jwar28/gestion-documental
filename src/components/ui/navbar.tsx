@@ -49,16 +49,10 @@ export default function Navbar() {
 								Información
 							</a>
 							<a
-								href="#"
+								href="#skills"
 								className="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-[#70b22d]"
 							>
 								Habilidades
-							</a>
-							<a
-								href="#"
-								className="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-[#70b22d]"
-							>
-								Temas
 							</a>
 						</div>
 					</div>
