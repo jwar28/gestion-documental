@@ -13,9 +13,9 @@ import {
 export default function Navbar() {
 	return (
 		<nav className="sticky top-0 z-50 w-full border-b bg-white shadow-sm transition-all duration-300 sm:fixed">
-			<div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+			<div className="mx-auto max-w-5xl px-6 sm:px-6 lg:px-8">
 				<div className="flex h-16 items-center justify-between">
-					<div className="flex-shrink-0">
+					<div className="">
 						<img src="/logo.png" alt="SENA Logo" width={50} height={50} />
 					</div>
 
@@ -57,7 +57,7 @@ export default function Navbar() {
 						<a href="/offers" className="mx-auto">
 							<PulsatingButton
 								pulseColor="#88d736"
-								className="rounded-md bg-[#70b22d] px-4 py-2 text-sm font-medium text-white"
+								className="rounded-md bg-[#70b22d] text-sm font-medium text-white"
 							>
 								Ver ofertas
 							</PulsatingButton>
@@ -96,10 +96,6 @@ export default function Navbar() {
 						</DropdownMenu>
 					</div>
 				</div>
-			</div>
-
-			<div className="md:hidden">
-				<div className="space-y-1 px-2 pb-3 pt-2 sm:px-3"></div>
 			</div>
 		</nav>
 	)
