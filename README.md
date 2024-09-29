@@ -2,7 +2,6 @@
 
 Informative page for document management technology
 
----
 
 ![just-the-basics](public/gweb.png)
 
