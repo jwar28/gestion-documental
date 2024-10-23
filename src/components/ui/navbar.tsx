@@ -22,19 +22,19 @@ export default function Navbar() {
 					<div className="hidden flex-grow justify-center md:flex">
 						<div className="flex items-baseline space-x-4">
 							<a
-								href="#home"
+								href="/#home"
 								className="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-[#70b22d]"
 							>
 								Inicio
 							</a>
 							<a
-								href="#information"
+								href="/#information"
 								className="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-[#70b22d]"
 							>
 								Información
 							</a>
 							<a
-								href="#skills"
+								href="/#skills"
 								className="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-[#70b22d]"
 							>
 								Habilidades
@@ -70,7 +70,7 @@ export default function Navbar() {
 							<DropdownMenuContent>
 								<DropdownMenuItem>
 									<a
-										href="#home"
+										href="/#home"
 										className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-[#70b22d]"
 									>
 										Inicio
@@ -78,7 +78,7 @@ export default function Navbar() {
 								</DropdownMenuItem>
 								<DropdownMenuItem>
 									<a
-										href="#information"
+										href="/#information"
 										className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-[#70b22d]"
 									>
 										Información
@@ -86,7 +86,7 @@ export default function Navbar() {
 								</DropdownMenuItem>
 								<DropdownMenuItem>
 									<a
-										href="#skills"
+										href="/#skills"
 										className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-[#70b22d]"
 									>
 										Habilidades
