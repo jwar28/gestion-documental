@@ -35,7 +35,7 @@ export const INFORMATION = {
 			start_date: "Abril 29, 2025",
 			finish_date: "Julio 28, 2027",
 			modality: "Presencial",
-			url: "https://oferta.senasofiaplus.edu.co/sofia-oferta/detalle-oferta.html?fm=0&fc=s6EYhiDduqc&ci=VALLEDUPAR%20(%20CESAR%20)",
+			url: "https://oferta.senasofiaplus.edu.co/sofia-oferta/detalle-oferta.html?fm=0&fc=edZ0fDsFzBY&ci=VALLEDUPAR%20(%20CESAR%20)",
 		},
 		{
 			title: "Gestion Documental",
