@@ -27,15 +27,25 @@ export const INFORMATION = {
 	extra_requirements:
 		"Presentar el resultado de la prueba o examen de estado de la educación media.",
 	offers: [
-		/* Template
 		{
-			title: "Oferta 1",
-			description: "Descripción de la oferta 1",
-			duration: "3 meses",
-			start_date: "2023-01-01",
+			title: "Gestion Documental",
+			description: "Código: 3174035",
+			insc_init: "Marzo 11",
+			insc_finish: "Marzo 13",
+			start_date: "Abril 29, 2025",
+			finish_date: "Julio 28, 2027",
 			modality: "Presencial",
-			url: "/",
+			url: "https://oferta.senasofiaplus.edu.co/sofia-oferta/detalle-oferta.html?fm=0&fc=s6EYhiDduqc&ci=VALLEDUPAR%20(%20CESAR%20)",
 		},
-		*/
+		{
+			title: "Gestion Documental",
+			description: "Código: 3174036",
+			insc_init: "Marzo 11",
+			insc_finish: "Marzo 13",
+			start_date: "Abril 29, 2025",
+			finish_date: "Julio 28, 2027",
+			modality: "Presencial",
+			url: "https://oferta.senasofiaplus.edu.co/sofia-oferta/detalle-oferta.html?fm=0&fc=s6EYhiDduqc&ci=VALLEDUPAR%20(%20CESAR%20)",
+		},
 	],
 }

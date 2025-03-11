@@ -50,23 +50,35 @@ const { offers } = INFORMATION
 			}
 			{
 				offers.map((offer, idx) => (
-					<Card className="max-sm:w-full sm:w-72 z-30">
+					<Card className="max-sm:w-full z-30">
 						<CardHeader>
 							<CardTitle>{offer.title}</CardTitle>
 							<CardDescription>{offer.description}</CardDescription>
 						</CardHeader>
 						<CardContent className="flex-grow">
-							<div class="mt-2 flex items-center">
-								<Clock className="mr-2 h-4 w-4" />
-								<span>{offer.duration}</span>
+							<div class="mt-2 flex flex-col items-center gap-1">
+								<div class="flex items-center">
+									<Clock className="mr-2 h-4 w-4" />
+									<p class="font-bold">Inscripciones</p>
+								</div>
+								<div class="flex gap-4">
+									<p><span class="font-bold">Desde:</span> {offer.insc_init}</p>
+									<p><span class="font-bold">Hasta:</span> {offer.insc_finish}</p>
+								</div>
 							</div>
-							<div class="mt-2 flex items-center">
-								<Calendar className="mr-2 h-4 w-4" />
-								<span>{offer.start_date}</span>
+							<div class="mt-2 flex flex-col items-center gap-1">
+								<div class="flex items-center">
+									<Calendar className="mr-2 h-4 w-4" />
+									<p class="font-bold">Periodo académico</p>
+								</div>
+								<div class="flex max-sm:flex-col sm:gap-4 gap-1">
+									<p><span class="font-bold">Desde:</span> {offer.start_date}</p>
+									<p><span class="font-bold">Hasta:</span> {offer.finish_date}</p>
+								</div>
 							</div>
-							<div class="mt-2 flex items-center">
+							<div class="mt-2 flex items-center justify-center">
 								<MapPin className="mr-2 h-4 w-4" />
-								<span>{offer.modality}</span>
+								<span class="font-bold">{offer.modality}</span>
 							</div>
 							<a href={offer.url} class="flex justify-center">
 								<Button className="mt-4 bg-[#70b22d] hover:bg-[#3f6519]">Ver oferta</Button>
